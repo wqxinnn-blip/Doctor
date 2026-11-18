@@ -1,0 +1,149 @@
+/* ==================== 弹窗全局 ==================== */
+QDialog#AddDepartmentDialog {
+    background-color: #FFFFFF;
+}
+
+/* ==================== 顶部大标题 ==================== */
+QLabel#label {
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #303133;
+    padding: 15px 0;
+    background: transparent; /* 必须透明，否则会像截图一样出现大色块 */
+}
+
+/* ==================== 表单标签 ==================== */
+QLabel#label_2, QLabel#label_3, QLabel#label_4, QLabel#label_5 {
+    font-family: "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    color: #606266;
+}
+
+/* ==================== 输入框 / 下拉框 ==================== */
+QLineEdit#edit_dept, QLineEdit#edit_detail, QComboBox#mainDoc_combo, QComboBox#doc_combo {
+    border: 1px solid #DCDFE6;
+    border-radius: 6px;
+    padding: 6px 12px;
+    background-color: #FFFFFF;
+    color: #303133;
+    font-size: 14px;
+    min-height: 28px;
+}
+
+QLineEdit:focus, QComboBox:focus {
+    border: 1px solid #409EFF; /* 聚焦时变蓝 */
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 24px;
+}
+QComboBox QAbstractItemView {
+    border: 1px solid #DCDFE6;
+    background: #FFFFFF;
+    selection-background-color: #ECF5FF;
+    selection-color: #409EFF;
+    outline: none;
+}
+
+/* ==================== 团队组建展示区 ==================== */
+QWidget#widget {
+    background-color: #F8F9FA; /* 浅灰底，让区域更明显 */
+    border: 1px dashed #DCDFE6; /* 虚线边框，表示可放置内容 */
+    border-radius: 6px;
+    min-height: 80px;
+}
+
+/* ==================== 按钮 ==================== */
+/* 添加人员按钮 (浅蓝底) */
+QPushButton#btn_add {
+    background-color: #ECF5FF;
+    color: #409EFF;
+    border: 1px solid #B3D8FF;
+    border-radius: 6px;
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: bold;
+}
+QPushButton#btn_add:hover {
+    background-color: #D9ECFF;
+    border-color: #409EFF;
+}
+
+/* 取消按钮 (白底灰边) */
+QPushButton#btn_cancel {
+    background-color: #FFFFFF;
+    color: #606266;
+    border: 1px solid #DCDFE6;
+    border-radius: 6px;
+    padding: 8px 24px;
+    font-size: 14px;
+}
+QPushButton#btn_cancel:hover {
+    border-color: #C0C4CC;
+    color: #303133;
+}
+
+/* 确定按钮 (蓝底白字) */
+QPushButton#btn_enter {
+    background-color: #409EFF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 24px;
+    font-size: 14px;
+    font-weight: bold;
+}
+QPushButton#btn_enter:hover {
+    background-color: #66B1FF;
+}
+QPushButton#btn_enter:pressed {
+    background-color: #3A8EE6;
+}
+
+
+/* ==================== 下拉框本体 ==================== */
+QComboBox#mainDoc_combo, QComboBox#doc_combo {
+    border: 1px solid #DCDFE6;
+    border-radius: 6px;
+    padding: 4px 12px;
+    background-color: #FFFFFF;
+    color: #303133;
+    font-size: 14px;
+    min-height: 30px;
+}
+
+QComboBox#mainDoc_combo:focus, QComboBox#doc_combo:focus {
+    border: 1px solid #409EFF;
+}
+
+/* 下拉按钮（右侧箭头区域） */
+QComboBox#mainDoc_combo::drop-down, QComboBox#doc_combo::drop-down {
+    border: none;
+    width: 24px;
+}
+
+/* ==================== 下拉弹出的列表 ==================== */
+QComboBox QAbstractItemView {
+    border: 1px solid #DCDFE6;
+    background-color: #FFFFFF;       /* 列表背景白 */
+    color: #303133;                  /* ★ 关键：强制文字为深色 */
+    selection-background-color: #ECF5FF; /* 选中时的背景浅蓝 */
+    selection-color: #409EFF;        /* 选中时的文字蓝 */
+    outline: none;
+    padding: 4px;                    /* 列表整体留点内边距 */
+}
+
+/* 下拉列表里的每一项 */
+QComboBox QAbstractItemView::item {
+    min-height: 30px;                /* 保证每一项有足够的高度 */
+    padding: 4px 8px;                /* 文字不贴边 */
+    border-radius: 4px;
+}
+
+/* 鼠标悬浮在列表项上时 */
+QComboBox QAbstractItemView::item:hover {
+    background-color: #F5F7FA;
+    color: #409EFF;
+}

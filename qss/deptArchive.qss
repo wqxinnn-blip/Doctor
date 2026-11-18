@@ -1,0 +1,120 @@
+/* ================= 全局背景 ================= */
+QWidget#DeptManagerWidget {
+    background-color: #f5f7fa; /* 整体浅灰背景，凸显白色卡片 */
+}
+
+/* ================= 顶部操作栏 ================= */
+/* 新增科室按钮（主操作，蓝色突出） */
+QPushButton#btn_add {
+    background-color: #409eff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 100px;
+    min-height: 36px;
+}
+QPushButton#btn_add:hover {
+    background-color: #66b1ff;
+}
+QPushButton#btn_add:pressed {
+    background-color: #3a8ee6;
+}
+
+/* 编辑档案按钮（次操作，白底灰边） */
+QPushButton#btn_edit {
+    background-color: #ffffff;
+    color: #606266;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 100px;
+    min-height: 36px;
+}
+QPushButton#btn_edit:hover {
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+}
+QPushButton#btn_edit:pressed {
+    border-color: #3a8ee6;
+}
+
+/* ================= 中间网格列表 ================= */
+QListWidget#listWidget {
+    background-color: transparent;
+    border: none;
+    outline: none; /* 去掉默认的虚线框 */
+}
+
+/* 卡片未选中时的状态（这里用 QListWidget::item 画底色和边框） */
+QListWidget#listWidget::item {
+    background-color: #ffffff;
+    border: 1px solid #dcdfe6;
+    border-radius: 8px;
+    margin: 6px; /* 控制卡片之间的缝隙 */
+}
+
+/* 卡片鼠标悬浮状态 */
+QListWidget#listWidget::item:hover {
+    border: 1px solid #409eff;
+}
+
+/* 卡片被选中时的状态（完美包裹，不会错位） */
+QListWidget#listWidget::item:selected {
+    background-color: #ecf5ff; /* 浅蓝色背景 */
+    border: 2px solid #409eff; /* 加粗蓝色边框 */
+}
+
+/* ================= 底部翻页栏 ================= */
+/* 上一页 / 下一页按钮 */
+QPushButton#btn_prev, QPushButton#btn_next {
+    background-color: #ffffff;
+    color: #606266;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    font-size: 13px;
+    min-width: 80px;
+    min-height: 32px;
+}
+QPushButton#btn_prev:hover, QPushButton#btn_next:hover {
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+}
+/* 按钮禁用状态（如当前在第一页） */
+QPushButton#btn_prev:disabled, QPushButton#btn_next:disabled {
+    color: #c0c4cc;
+    background-color: #f5f7fa;
+    border-color: #e4e7ed;
+}
+
+/* 页码标签 */
+QLabel#lab_page {
+    font-size: 14px;
+    color: #606266;
+    font-weight: bold;
+    padding: 0 15px;
+}
+
+/* ================= 垂直滚动条美化 ================= */
+QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background: #c0c4cc;
+    border-radius: 4px;
+    min-height: 40px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #909399;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: transparent;
+}

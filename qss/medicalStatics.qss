@@ -1,0 +1,135 @@
+/* ==================== 全局基础 ==================== */
+WorkloadStatsWidget {
+    background-color: #F5F7FA;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+/* 滚动区域与内容面板透明化 */
+QScrollArea#mainScrollArea {
+    background-color: #F5F7FA;
+    border: none;
+}
+QWidget#contentWidget {
+    background-color: #F5F7FA;
+}
+
+/* ==================== 顶部 周/月 切换按钮 ==================== */
+QPushButton#tabBtn {
+    background: #FFFFFF;
+    border: 1px solid #DCDFE6;
+    border-radius: 4px;
+    padding: 6px 16px;
+    color: #606266;
+    font-size: 13px;
+    outline: none;
+}
+QPushButton#tabBtn:hover {
+    color: #409EFF;
+    border-color: #C6E2FF;
+}
+QPushButton#tabBtn:checked {
+    background: #409EFF;
+    color: #FFFFFF;
+    border: 1px solid #409EFF;
+    font-weight: bold;
+}
+
+/* ==================== 导出按钮 ==================== */
+QPushButton#btnExport {
+    background: #67C23A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 13px;
+}
+QPushButton#btnExport:hover {
+    background: #85CE61;
+}
+
+/* ==================== 下拉框 ==================== */
+QComboBox {
+    background-color: #FFFFFF;
+    border: 1px solid #DCDFE6;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #303133;
+    font-size: 13px;
+    min-width: 80px;
+    outline: none;
+}
+QComboBox:hover {
+    border-color: #C0C4CC;
+}
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+QComboBox::down-arrow {
+    image: url(:/image/mainWIn_img/arrow.png);
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+}
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    border: 1px solid #DCDFE6;
+    selection-background-color: #409EFF;
+    selection-color: #FFFFFF;
+    color: #303133;
+    outline: none;
+}
+
+/* ==================== 图表卡片 ==================== */
+QWidget#chartCard {
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #EBEEF5;
+}
+QLabel#cardTitle {
+    font-size: 15px;
+    font-weight: bold;
+    color: #303133;
+    border-left: 3px solid #409EFF;
+    padding-left: 8px;
+}
+
+/* ==================== 顶部指标卡片 ==================== */
+QWidget#summaryCard {
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #EBEEF5;
+}
+QLabel#summaryTitle {
+    color: #909399;
+    font-size: 12px;
+}
+QLabel#summaryValue {
+    color: #303133;
+    font-size: 20px;
+    font-weight: bold;
+}
+QLabel#summaryTrend {
+    color: #F56C6C;
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+/* ==================== 滚动条美化 ==================== */
+QScrollBar:vertical {
+    border: none;
+    background: #F5F7FA;
+    width: 8px;
+}
+QScrollBar::handle:vertical {
+    background: #C0C4CC;
+    min-height: 30px;
+    border-radius: 4px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #909399;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}

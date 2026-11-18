@@ -1,0 +1,94 @@
+/* ================= 全局强制白底黑字 ================= */
+QWidget#ProfileWidget {
+    background-color: #ffffff;
+}
+QWidget#ProfileWidget QLabel {
+    color: #303133;
+    background: transparent;
+}
+
+/* ================= 标题样式（自带蓝色竖线） ================= */
+QLabel#label, QLabel#label_4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #303133;
+
+    /* 关键：直接利用左边框作为蓝线 */
+    border-left: 4px solid #2f7cf6;
+    padding-left: 10px;            /* 文字和蓝线的间距 */
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+/* ================= 表单标签 ================= */
+QLabel#label_2, QLabel#label_3, QLabel#label_5,
+QLabel#label_6, QLabel#label_7 {
+    font-size: 14px;
+    color: #606266;
+}
+
+/* ================= 输入框 ================= */
+QLineEdit {
+    background-color: #ffffff;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 14px;
+    color: #303133;
+    min-height: 28px;
+}
+
+QLineEdit:hover {
+    border-color: #c0c4cc;
+}
+
+QLineEdit:focus {
+    border-color: #2f7cf6;
+}
+
+/* ================= 按钮 ================= */
+QPushButton#btn_submit {
+    background-color: #2f7cf6;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    min-height: 38px;
+    min-width: 110px;
+}
+
+QPushButton#btn_submit:hover {
+    background-color: #4a8cff;
+}
+
+/* ================= QMessageBox 弹窗整体 ================= */
+QMessageBox {
+    background-color: #ffffff; /* 强制白底 */
+}
+
+/* 标题文字和内部所有文字（解决深色模式看不见的问题） */
+QMessageBox QLabel {
+    color: #303133; /* 强制深灰/黑字 */
+    font-size: 14px;
+    background: transparent;
+}
+
+/* ================= QMessageBox 按钮 ================= */
+QMessageBox QPushButton {
+    background-color: #2f7cf6; /* 配合你主题的蓝色 */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 24px;
+    font-size: 13px;
+    min-width: 70px;
+    min-height: 24px;
+}
+
+QMessageBox QPushButton:hover {
+    background-color: #4a8cff;
+}
+
+QMessageBox QPushButton:pressed {
+    background-color: #1a5fc4;
+}

@@ -1,0 +1,144 @@
+
+DoctorManagementWidget {
+    background-color: #F5F7FA; /* 浅灰背景，让白色表格更凸显 */
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+/* =================================================================
+   顶部搜索输入框
+   ================================================================= */
+QLineEdit {
+    border: 1px solid #DCDFE6;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background-color: #FFFFFF;
+    font-size: 14px;
+    color: #606266;
+    min-width: 150px;
+    min-height: 28px;
+}
+QLineEdit:focus {
+    border: 1px solid #409EFF; /* 聚焦时变蓝 */
+}
+QLineEdit::placeholder {
+    color: #C0C4CC;
+}
+
+/* =================================================================
+   按钮通用样式
+   ================================================================= */
+QPushButton {
+    border-radius: 4px;
+    padding: 6px 18px;
+    font-size: 14px;
+    color: #FFFFFF;
+    border: none;
+    min-height: 28px;
+}
+/* 鼠标悬浮时的通用变亮效果 */
+QPushButton:hover { opacity: 0.8; }
+
+/* --- 查询按钮 (蓝色) --- */
+QPushButton#btn_search {
+    background-color: #409EFF;
+}
+QPushButton#btn_search:hover { background-color: #66B1FF; }
+QPushButton#btn_search:pressed { background-color: #3A8EE6; }
+
+/* --- 新增医师按钮 (绿色) --- */
+QPushButton#btn_addDoc {
+    background-color: #67C23A;
+}
+QPushButton#btn_addDoc:hover { background-color: #85CE61; }
+QPushButton#btn_addDoc:pressed { background-color: #5DAF34; }
+
+/* --- 上一页/下一页按钮 (蓝色) --- */
+QPushButton#btn_prev, QPushButton#btn_next {
+    background-color: #409EFF;
+    min-width: 80px;
+}
+QPushButton#btn_prev:hover, QPushButton#btn_next:hover { background-color: #66B1FF; }
+QPushButton#btn_prev:pressed, QPushButton#btn_next:pressed { background-color: #3A8EE6; }
+/* 禁用状态(如果是第一页或最后一页) */
+QPushButton#btn_prev:disabled, QPushButton#btn_next:disabled {
+    background-color: #C0C4CC;
+    color: #FFFFFF;
+}
+
+QTableWidget QPushButton {
+    background-color: #409EFF;
+    color: white;
+    border-radius: 4px;
+    padding: 4px 12px; /* 适度内边距 */
+    min-height: 26px;  /* 最小高度 */
+    max-height: 26px;  /* 最大高度限制，防止被拉长 */
+    font-size: 13px;
+}
+QTableWidget QPushButton:hover {
+    background-color: #66B1FF;
+}
+
+/* =================================================================
+   表格样式 (QTableWidget)
+   ================================================================= */
+QTableWidget {
+    background-color: #FFFFFF;
+    border: 1px solid #EBEEF5;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #606266;
+    outline: none; /* 去除选中时的虚线框 */
+}
+/* 单元格样式 */
+QTableWidget::item {
+    padding: 5px;
+    border-bottom: 1px solid #EBEEF5;
+}
+/* 鼠标悬浮 & 选中行样式 (高亮浅蓝色) */
+QTableWidget::item:hover {
+    background-color: #F5F7FA;
+}
+QTableWidget::item:selected {
+    background-color: #ECF5FF;
+    color: #409EFF;
+}
+
+/* 表头样式 */
+QHeaderView::section {
+    background-color: #F5F7FA;
+    color: #909399;
+    font-weight: bold;
+    border: none;
+    border-bottom: 1px solid #EBEEF5;
+    padding: 8px;
+    text-align: center;
+}
+
+/* 左上角表头交叉处（如果有） */
+QTableCornerButton::section {
+    background-color: #F5F7FA;
+    border: none;
+}
+
+/* =================================================================
+   底部页码标签
+   ================================================================= */
+QLabel#lab_pageInfo {
+    font-size: 14px;
+    color: #606266;
+    font-weight: bold;
+    qproperty-alignment: AlignCenter;
+    min-width: 60px;
+}
+
+/* =================================================================
+   操作列动态按钮样式（可选，如果不在代码里写死的话）
+   ================================================================= */
+QPushButton[text="修改"] {
+    background-color: #409EFF;
+    padding: 4px 10px;
+}
+QPushButton[text="删除"] {
+    background-color: #F56C6C;
+    padding: 4px 10px;
+}

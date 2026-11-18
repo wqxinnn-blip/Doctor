@@ -1,0 +1,160 @@
+/* ================= 对话框整体 ================= */
+QDialog#AddMedicineDialog {
+    background-color: #ffffff;
+}
+
+/* ================= 标题 ================= */
+QLabel#label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #303133;
+    padding: 8px 0 16px 0;
+}
+
+/* ================= 表单标签 ================= */
+QLabel#label_2,
+QLabel#label_3,
+QLabel#label_4 {
+    font-size: 14px;
+    color: #303133;
+}
+
+/* ================= 输入框 ================= */
+QLineEdit#edit_medical,
+QLineEdit#edit_dosage,
+QLineEdit#edit_use {
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    padding: 6px 12px;
+    min-height: 28px;
+    font-size: 14px;
+    color: #303133;
+    background-color: #ffffff;
+    selection-background-color: #409eff;
+    selection-color: #ffffff;
+}
+
+QLineEdit#edit_medical:hover,
+QLineEdit#edit_dosage:hover,
+QLineEdit#edit_use:hover {
+    border-color: #c0c4cc;
+}
+
+QLineEdit#edit_medical:focus,
+QLineEdit#edit_dosage:focus,
+QLineEdit#edit_use:focus {
+    border-color: #409eff;
+}
+
+/* ================= 列表 ================= */
+QListWidget#list_detail {
+    border: 1px solid #e4e7ed;
+    border-radius: 6px;
+    background-color: #ffffff;
+    outline: none;
+    padding: 6px;
+    font-size: 13px;
+    color: #303133;
+}
+
+QListWidget#list_detail::item {
+    height: 34px;
+    padding-left: 10px;
+    border-radius: 4px;
+    color: #303133;
+}
+
+QListWidget#list_detail::item:hover {
+    background-color: #f5f7fa;
+}
+
+QListWidget#list_detail::item:selected {
+    background-color: #ecf5ff;
+    color: #409eff;
+}
+
+/* 列表滚动条 */
+QListWidget#list_detail QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+    margin: 2px;
+}
+
+QListWidget#list_detail QScrollBar::handle:vertical {
+    background: #c0c4cc;
+    border-radius: 4px;
+    min-height: 30px;
+}
+
+QListWidget#list_detail QScrollBar::handle:vertical:hover {
+    background: #909399;
+}
+
+QListWidget#list_detail QScrollBar::add-line:vertical,
+QListWidget#list_detail QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+/* ================= 按钮通用 ================= */
+QDialog#AddMedicineDialog QPushButton {
+    min-height: 32px;
+    padding: 4px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    border: 1px solid #dcdfe6;
+    background-color: #ffffff;
+    color: #303133;
+}
+
+QDialog#AddMedicineDialog QPushButton:hover {
+    border-color: #409eff;
+    color: #409eff;
+}
+
+/* ================= 添加按钮（主操作） ================= */
+QPushButton#btn_add {
+    color: #ffffff;
+    background-color: #409eff;
+    border: 1px solid #409eff;
+}
+
+QPushButton#btn_add:hover {
+    background-color: #66b1ff;
+    border-color: #66b1ff;
+    color: #ffffff;
+}
+
+QPushButton#btn_add:pressed {
+    background-color: #3a8ee6;
+    border-color: #3a8ee6;
+}
+
+/* ================= 删除按钮（警告） ================= */
+QPushButton#btn_del {
+    color: #f56c6c;
+    background-color: #fef0f0;
+    border: 1px solid #fbc4c4;
+}
+
+QPushButton#btn_del:hover {
+    background-color: #fde2e2;
+    border-color: #f56c6c;
+    color: #f56c6c;
+}
+
+QPushButton#btn_del:pressed {
+    background-color: #fab6b6;
+}
+
+/* ================= 关闭按钮（次要） ================= */
+QPushButton#btn_close {
+    color: #606266;
+    background-color: #ffffff;
+    border: 1px solid #dcdfe6;
+}
+
+QPushButton#btn_close:hover {
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+}

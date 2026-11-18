@@ -1,0 +1,237 @@
+QWidget#SysLogWidget {
+    background-color: #ffffff;
+}
+
+/* ================= 日期输入框 ================= */
+QDateEdit#edit_date {
+    background-color: #ffffff;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 14px;
+    color: #303133;
+    min-height: 26px;
+}
+QDateEdit#edit_date:hover { border-color: #c0c4cc; }
+QDateEdit#edit_date:focus { border-color: #409eff; }
+
+QDateEdit#edit_date::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 24px;
+    border-left: none;
+}
+QDateEdit#edit_date::down-arrow {
+    image: none;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #909399;
+    width: 0;
+    height: 0;
+    margin-right: 6px;
+}
+
+/* ================= 日历弹窗完整样式 ================= */
+QCalendarWidget {
+    background-color: #ffffff;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+}
+
+/* 顶部导航栏（年月切换） */
+QCalendarWidget QWidget#qt_calendar_navigationbar {
+    background-color: #f5f7fa;
+    border-bottom: 1px solid #dcdfe6;
+    min-height: 36px;
+}
+
+/* 导航栏年月文字 */
+QCalendarWidget QLabel#qt_calendar_yearlabel,
+QCalendarWidget QLabel#qt_calendar_monthlabel {
+    color: #303133;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 4px;
+}
+
+/* 导航栏左右切换按钮 */
+QCalendarWidget QToolButton {
+    color: #303133;
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+QCalendarWidget QToolButton:hover {
+    background-color: #ecf5ff;
+}
+QCalendarWidget QToolButton::menu-indicator {
+    image: none;
+}
+
+/* 星期表头 */
+QCalendarWidget QHeaderView::section {
+    background-color: #f5f7fa;
+    color: #606266;
+    font-size: 13px;
+    border: none;
+    border-bottom: 1px solid #ebeef5;
+    padding: 6px 0;
+    font-weight: normal;
+}
+
+/* 日期网格区域 */
+QCalendarWidget QAbstractItemView {
+    background-color: #ffffff;
+    color: #303133;
+    outline: none;
+    font-size: 13px;
+}
+
+/* 日期单元格 */
+QCalendarWidget QAbstractItemView::item {
+    border: none;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+/* 选中日期 */
+QCalendarWidget QAbstractItemView::item:selected {
+    background-color: #409eff;
+    color: #ffffff;
+}
+
+/* 鼠标悬停日期 */
+QCalendarWidget QAbstractItemView::item:hover {
+    background-color: #ecf5ff;
+    color: #409eff;
+}
+
+/* 周末日期 */
+QCalendarWidget QAbstractItemView::item:weekend {
+    color: #f56c6c;
+}
+
+/* 当天日期标记 */
+QCalendarWidget QAbstractItemView::item:today {
+    border: 1px solid #409eff;
+    color: #409eff;
+    font-weight: bold;
+}
+
+/* 非本月日期（上月/下月） */
+QCalendarWidget QAbstractItemView::item:other-month {
+    color: #c0c4cc;
+}
+
+/* ================= 类型下拉框 ================= */
+QComboBox {
+    background-color: #ffffff;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 14px;
+    color: #303133;
+    min-height: 26px;
+}
+QComboBox:hover { border-color: #c0c4cc; }
+QComboBox:focus { border-color: #409eff; }
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 28px;
+    border-left: none;
+    background: transparent;
+}
+QComboBox::down-arrow {
+    image: none;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #909399;
+    width: 0;
+    height: 0;
+    margin-right: 8px;
+}
+QComboBox:hover::down-arrow { border-top-color: #409eff; }
+QComboBox::down-arrow:on { border-top-color: #409eff; }
+
+QComboBox QAbstractItemView {
+    border: 1px solid #e4e7ed;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #303133;
+    selection-background-color: #ecf5ff;
+    selection-color: #409eff;
+    outline: none;
+    padding: 4px;
+}
+
+/* ================= 按钮统一风格 ================= */
+QPushButton#btn_search {
+    background-color: #409eff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+QPushButton#btn_search:hover { background-color: #66b1ff; }
+
+QPushButton#btn_remove,
+QPushButton#btn_prev,
+QPushButton#btn_next {
+    background-color: #ffffff;
+    color: #606266;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    font-size: 14px;
+}
+QPushButton#btn_remove:hover,
+QPushButton#btn_prev:hover,
+QPushButton#btn_next:hover {
+    background-color: #ecf5ff;
+    color: #409eff;
+    border-color: #409eff;
+}
+
+/* ================= 日志表格 ================= */
+QTableWidget#log_table {
+    background-color: #ffffff;
+    border: 1px solid #e4e7ed;
+    border-radius: 4px;
+    gridline-color: #ebeef5;
+    outline: none;
+    font-size: 13px;
+    color: #606266;
+}
+QTableWidget#log_table::item {
+    padding: 6px;
+    border-bottom: 1px solid #ebeef5;
+}
+QTableWidget#log_table::item:selected {
+    background-color: #ecf5ff;
+    color: #409eff;
+}
+
+QHeaderView::section {
+    background-color: #409eff;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    padding: 8px;
+}
+QTableCornerButton::section {
+    background-color: #409eff;
+    border: none;
+}
+
+/* ================= 页码标签 ================= */
+QLabel#lab_pageinfo {
+    font-size: 14px;
+    color: #606266;
+    padding: 0 15px;
+}

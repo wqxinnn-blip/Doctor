@@ -1,0 +1,122 @@
+/* ============================================================
+   顶部导航栏 top_widget
+   ============================================================ */
+QWidget#top_widget {
+    background-color: #4a90e2;
+    border: none;
+}
+QToolButton#btn_home,
+QToolButton#btn_archive,
+QToolButton#btn_tongue_detect,
+QToolButton#btn_record {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 0 22px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+QToolButton#btn_home:hover,
+QToolButton#btn_archive:hover,
+QToolButton#btn_tongue_detect:hover,
+QToolButton#btn_record:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+QToolButton#btn_home:pressed,
+QToolButton#btn_archive:pressed,
+QToolButton#btn_tongue_detect:pressed,
+QToolButton#btn_record:pressed {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+/* 选中页面激活态（后面代码切换当前页面按钮时启用这个样式） */
+QToolButton#btn_home:checked,
+QToolButton#btn_archive:checked,
+QToolButton#btn_tongue_detect:checked,
+QToolButton#btn_record:checked {
+    background-color: rgba(255,255,255,0.25);
+}
+
+/* ============================================================
+   主界面背景
+   ============================================================ */
+QWidget#Widget{
+   background-color: #e3f2fd;   /* 浅蓝色 */
+}
+
+/* ============================================================
+   左侧卡片：个人信息卡片、推理进度卡片
+   ============================================================ */
+QWidget#widget_person_card, QWidget#widget_progress_card{
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+/* 圆形头像label */
+QLabel#label{
+    background:#e8edf2;
+    border-radius:40px;
+}
+
+/* 卡片内普通文字label */
+QLabel{
+    font-family:"Microsoft YaHei";
+    font-size:14px;
+    color:#333333;
+}
+
+/* ============================================================
+   中间舌苔图片区域
+   ============================================================ */
+QWidget#middle_widget{
+    background-color:#000000;
+    border-radius:12px;
+}
+QLabel#lab_tongue_img{
+    background-color: #000000;
+}
+
+/* ============================================================
+   右侧检测报告面板
+   ============================================================ */
+QWidget#right_widget{
+    background-color:#ffffff;
+    border-radius:12px;
+}
+QLabel#lab_report{
+    font-size:18px;
+    font-weight:bold;
+    border-left:4px solid #348ede;
+    padding-left:10px;
+}
+QLabel#lab_report_content{
+    padding:8px;
+}
+
+/* ============================================================
+   底部养生小贴士卡片
+   ============================================================ */
+QWidget#bottom_widget{
+    background-color:#ffffff;
+    border-radius:12px;
+}
+QLabel#label_tips_content{
+    padding:10px;
+}
+
+/* ============================================================
+   右侧三个按钮：保存报告 /再次检测 /预约医生
+   ============================================================ */
+QPushButton{
+    background-color:#348ede;
+    color:white;
+    border:none;
+    border-radius:6px;
+    padding:8px 4px;
+    font-size:13px;
+}
+QPushButton:hover{
+    background-color:#2870b8;
+}
+QPushButton:pressed{
+    background-color:#1e5994;
+}

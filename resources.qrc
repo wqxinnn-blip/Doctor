@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qss/style.qss</file>
+        <file>image/login_img/login.jpg</file>
+        <file>image/login_img/mima.png</file>
+        <file>image/login_img/yonghu.png</file>
+        <file>image/mainWIn_img/archive.png</file>
+        <file>image/mainWIn_img/mainWindow.jpg</file>
+        <file>image/mainWIn_img/menu.png</file>
+        <file>image/mainWIn_img/myProfile.png</file>
+        <file>image/mainWIn_img/reserve.png</file>
+        <file>image/mainWIn_img/Schedule.png</file>
+        <file>qss/mainWindow.qss</file>
+        <file>image/mainWIn_img/arrow.png</file>
+        <file>qss/schedule.qss</file>
+        <file>image/schedule_img/schedule.png</file>
+        <file>image/schedule_img/error.png</file>
+        <file>image/schedule_img/plus.png</file>
+        <file>qss/EditScheduleDlg.qss</file>
+        <file>qss/dignosis.qss</file>
+        <file>qss/addMedicine.qss</file>
+        <file>qss/profile.qss</file>
+        <file>qss/doctorSchedule.qss</file>
+        <file>qss/sysLog.qss</file>
+        <file>qss/deptArchive.qss</file>
+        <file>qss/addDept.qss</file>
+        <file>qss/medicalStatics.qss</file>
+        <file>qss/DocArchive.qss</file>
+        <file>qss/DocEdit.qss</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,216 @@
+/* ===== 编辑排班弹窗整体 ===== */
+QDialog#EditScheduleDialog {
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+/* ===== 通用标签 ===== */
+QDialog#EditScheduleDialog QLabel {
+    font-size: 14px;
+    color: #303133;
+}
+
+/* 顶部日期标题 - 加粗突出 */
+QLabel#lab_date_2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #303133;
+}
+
+/* 备注内容区域 - 浅底框突出显示 */
+QLabel#lab_comment {
+    background-color: #f5f7fa;
+    border: 1px solid #e4e7ed;
+    border-radius: 6px;
+    padding: 8px 10px;
+    color: #606266;
+    font-size: 13px;
+    min-height: 40px;
+}
+
+/* ===== 下拉框（医生 + 班次，共用样式） ===== */
+QComboBox#combo_doctor,
+QComboBox#combo_shift {
+    min-height: 32px;
+    padding: 0 28px 0 12px;  /* 右边留足箭头空间，左边内边距适中 */
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #303133;
+    font-size: 14px;
+}
+
+QComboBox#combo_doctor:hover,
+QComboBox#combo_shift:hover {
+    border-color: #c0c4cc;
+}
+QComboBox#combo_doctor:focus,
+QComboBox#combo_shift:focus {
+    border-color: #409eff;
+}
+
+QComboBox#combo_doctor::drop-down,
+QComboBox#combo_shift::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 28px;
+    border-left: none;
+    background: transparent;
+}
+
+QComboBox#combo_doctor::down-arrow,
+QComboBox#combo_shift::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #909399;
+    width: 0;
+    height: 0;
+    margin-right: 10px;
+}
+
+/* 下拉列表 */
+QComboBox#combo_doctor QAbstractItemView,
+QComboBox#combo_shift QAbstractItemView {
+    border: 1px solid #e4e7ed;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #303133;
+    selection-background-color: #ecf5ff;
+    selection-color: #409eff;
+    outline: none;
+    padding: 4px;
+}
+QComboBox#combo_doctor QAbstractItemView::item,
+QComboBox#combo_shift QAbstractItemView::item {
+    min-height: 28px;
+    padding: 4px 12px;
+    color: #303133;
+}
+QComboBox#combo_doctor QAbstractItemView::item:hover,
+QComboBox#combo_shift QAbstractItemView::item:hover {
+    background-color: #f5f7fa;
+    color: #409eff;
+}
+QComboBox#combo_doctor QAbstractItemView::item:selected,
+QComboBox#combo_shift QAbstractItemView::item:selected {
+    background-color: #ecf5ff;
+    color: #409eff;
+}
+
+/* 禁用状态（周视图班次） */
+QComboBox#combo_shift:disabled {
+    color: #606266;
+    background-color: #f5f7fa;
+    border-color: #e4e7ed;
+}
+
+/* ===== 已排班医生列表 ===== */
+QListWidget#list_scheduled {
+    border: 1px solid #e4e7ed;
+    border-radius: 6px;
+    background-color: #ffffff;
+    outline: none;
+    padding: 4px;
+}
+QListWidget#list_scheduled::item {
+    min-height: 32px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #303133;
+    font-size: 13px;
+}
+QListWidget#list_scheduled::item:hover {
+    background-color: #f5f7fa;
+}
+QListWidget#list_scheduled::item:selected {
+    background-color: #ecf5ff;
+    color: #409eff;
+}
+
+/* ===== 列表滚动条美化 ===== */
+QListWidget#list_scheduled QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 2px;
+}
+QListWidget#list_scheduled QScrollBar::handle:vertical {
+    background: #c0c4cc;
+    border-radius: 5px;
+    min-height: 30px;
+}
+QListWidget#list_scheduled QScrollBar::handle:vertical:hover {
+    background: #909399;
+}
+QListWidget#list_scheduled QScrollBar::add-line:vertical,
+QListWidget#list_scheduled QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+/* ===== 工具按钮 通用样式 ===== */
+QDialog#EditScheduleDialog QToolButton {
+    min-height: 32px;
+    padding: 0 14px;
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #303133;
+    font-size: 13px;
+}
+QDialog#EditScheduleDialog QToolButton:hover {
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+}
+QDialog#EditScheduleDialog QToolButton:pressed {
+    color: #3a8ee6;
+    border-color: #3a8ee6;
+    background-color: #d9ecff;
+}
+
+/* 添加按钮 - 主操作蓝色突出 */
+QToolButton#btn_add {
+    color: #ffffff;
+    background-color: #409eff;
+    border-color: #409eff;
+}
+QToolButton#btn_add:hover {
+    background-color: #66b1ff;
+    border-color: #66b1ff;
+    color: #ffffff;
+}
+QToolButton#btn_add:pressed {
+    background-color: #3a8ee6;
+    border-color: #3a8ee6;
+    color: #ffffff;
+}
+
+/* 移除按钮 - 警示浅红风格 */
+QToolButton#btn_remove {
+    color: #f56c6c;
+    border-color: #fbc4c4;
+    background-color: #fef0f0;
+}
+QToolButton#btn_remove:hover {
+    background-color: #fde2e2;
+    border-color: #f56c6c;
+    color: #f56c6c;
+}
+QToolButton#btn_remove:pressed {
+    background-color: #fab6b6;
+    border-color: #f56c6c;
+    color: #ffffff;
+}
+
+/* 关闭按钮 - 次要普通样式 */
+QToolButton#btn_close {
+    min-width: 80px;
+    color: #606266;
+    border-color: #dcdfe6;
+    background-color: #ffffff;
+}
+QToolButton#btn_close:hover {
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+}

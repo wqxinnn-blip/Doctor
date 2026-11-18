@@ -1,0 +1,199 @@
+QWidget {
+    background: #F5F7FB;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    font-size: 14px;
+    color: #303133;
+}
+
+QLabel#sectionTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1A1A1A;
+    padding: 4px 0 8px 12px;
+    border-left: 4px solid #409EFF;
+}
+
+QFrame#historyCard, QFrame#diagCard, QFrame#patientCard, QFrame#actionCard {
+    background: #FFFFFF;
+    border: 1px solid #EBEEF5;
+    border-radius: 10px;
+}
+
+QLabel#historyDate {
+    font-size: 14px;
+    font-weight: bold;
+    color: #409EFF;
+}
+
+QLabel#historyText {
+    font-size: 13px;
+    color: #606266;
+    line-height: 22px;
+}
+
+QPushButton#btnMore {
+    border: none;
+    color: #409EFF;
+    font-size: 13px;
+    background: transparent;
+}
+QPushButton#btnMore:hover {
+    color: #66B1FF;
+    text-decoration: underline;
+}
+
+QLabel#diagLabel {
+    font-size: 14px;
+    color: #303133;
+}
+
+QTextEdit#diagEdit {
+    border: 1px solid #DCDFE6;
+    border-radius: 6px;
+    padding: 8px;
+    background: #FFFFFF;
+    font-size: 14px;
+    color: #303133;
+}
+QTextEdit#diagEdit:focus {
+    border: 1px solid #409EFF;
+}
+
+/* ★ 建议用药列表 */
+QListWidget#diagList {
+    border: 1px solid #DCDFE6;
+    border-radius: 6px;
+    padding: 4px;
+    background: #FFFFFF;
+    font-size: 14px;
+    color: #303133;
+    outline: none;
+}
+QListWidget#diagList::item {
+    padding: 6px 8px;
+    border-bottom: 1px solid #F2F6FC;
+    min-height: 24px;
+}
+QListWidget#diagList::item:last {
+    border-bottom: none;
+}
+QListWidget#diagList::item:selected {
+    background: #ECF5FF;
+    color: #409EFF;
+    border-radius: 4px;
+}
+QListWidget#diagList::item:hover {
+    background: #F5F7FB;
+}
+
+/* ★ 添加用药按钮 */
+QPushButton#btnAddMedicine {
+    background: #409EFF;
+    border: none;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 110px;
+    min-height: 120px;
+    padding: 0 16px;
+}
+QPushButton#btnAddMedicine:hover {
+    background: #66B1FF;
+}
+QPushButton#btnAddMedicine:pressed {
+    background: #3A8EE6;
+}
+
+QLabel#avatar {
+    background: #F0F5FF;
+    border-radius: 40px;
+    font-size: 36px;
+    color: #409EFF;
+}
+
+QLabel#patientInfo {
+    font-size: 14px;
+    color: #303133;
+    padding: 4px 0;
+}
+
+QPushButton#btnViewReport {
+    background: #FFFFFF;
+    border: 1px solid #409EFF;
+    border-radius: 8px;
+    color: #409EFF;
+    font-size: 15px;
+    font-weight: bold;
+}
+QPushButton#btnViewReport:hover {
+    background: #ECF5FF;
+}
+
+QPushButton#btnCamera {
+    background: #409EFF;
+    border: none;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+}
+QPushButton#btnCamera:hover {
+    background: #66B1FF;
+}
+
+QPushButton#btnSave {
+    background: #409EFF;
+    border: none;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+QPushButton#btnSave:hover {
+    background: #66B1FF;
+}
+
+QPushButton#btnReport {
+    background: #67C23A;
+    border: none;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+QPushButton#btnReport:hover {
+    background: #85CE61;
+}
+
+/* 操作状态提示 */
+QLabel#operationStatus {
+    background-color: #f5f7fa;
+    border: 1px solid #e4e7ed;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: #606266;
+    min-height: 20px;
+}
+
+/* 成功（绿色） */
+QLabel#operationStatus[status="success"] {
+    background-color: #f0f9eb;
+    border-color: #e1f3d8;
+    color: #67c23a;
+}
+
+/* 失败（红色） */
+QLabel#operationStatus[status="error"] {
+    background-color: #fef0f0;
+    border-color: #fbc4c4;
+    color: #f56c6c;
+}
+
+/* 进行中（蓝色） */
+QLabel#operationStatus[status="info"] {
+    background-color: #ecf5ff;
+    border-color: #d9ecff;
+    color: #409eff;
+}

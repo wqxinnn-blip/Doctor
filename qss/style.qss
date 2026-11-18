@@ -1,0 +1,81 @@
+/* ============登录窗口样式（Login_Widget)=========*/
+QDialog#Login_Dialog{
+    /* 登录对话框背景图 */
+    border-image: url(:/image/login_img/login.jpg) 0 0 0 0 stretch stretch;
+}
+
+/* ============ 顶部标题 ============ */
+QLabel#lab_topic {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+/* ============ 左侧大标题 ============ */
+QLabel#lab_tip {
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+/* 登录卡片widget */
+#mian_widget{
+    background-color: #ffffff;
+    border-radius:16px;
+}
+/* 标题文本 医保账号登录 */
+#lab_title{
+    font-size:36px;
+    font-weight:bold;
+    color:#222222;
+    padding:20px 0;
+}
+
+/* 统一输入框样式 */
+#edit_user, #edit_pwd {
+    background-color: #ffffff;
+    color: #333333;
+    min-height: 48px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 16px;
+
+    /* 左侧预留图标位置 */
+    padding-left: 40px;
+
+    /* 右侧也可以留一点，避免文字贴边 */
+    padding-right: 12px;
+}
+
+#lab_tip_time {
+    font-size: 18px;
+    color: #FF0000;         /* 红色 */
+    font-weight: normal;
+    padding: 5px 0;
+    text-align: center;
+}
+
+/* 蓝色登录按钮 */
+#btn_login{
+    min-height:50px;
+    background-color:#217aff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+}
+#btn_login:hover{
+    background-color:#1868dd;
+}
+
+#btn_login:pressed {
+    background-color: #1355b8;
+}
+
+
+
+
+

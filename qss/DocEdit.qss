@@ -1,0 +1,124 @@
+/* =================================================================
+   弹窗整体背景与基础字体
+   ================================================================= */
+QDialog {
+    background-color: #F5F7FA; /* 浅灰背景，更有质感 */
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+/* =================================================================
+   左侧表单文字标签
+   ================================================================= */
+QLabel {
+    color: #606266;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 专门针对只读工号的值 (lab_workNo1) */
+QLabel#lab_workNo1 {
+    color: #909399; /* 稍微浅一点的灰色，表示不可修改 */
+    font-weight: bold;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+/* =================================================================
+   输入框与下拉框 (统一风格)
+   ================================================================= */
+   QLineEdit, QComboBox {
+       border: 1px solid #DCDFE6;
+       border-radius: 4px;
+       padding: 4px 8px;
+       background-color: #FFFFFF;
+       color: #606266; /* 这里的颜色确保文字是深灰色 */
+       font-size: 13px;
+       min-height: 24px;
+   }
+
+   QLineEdit:hover, QComboBox:hover {
+       border: 1px solid #C0C4CC;
+   }
+   QLineEdit:focus, QComboBox:focus {
+       border: 1px solid #409EFF;
+   }
+
+   /* 下拉框右侧的小箭头 */
+   QComboBox::drop-down {
+       subcontrol-origin: padding;
+       subcontrol-position: top right;
+       width: 20px;
+       border-left-width: 0px;
+       border-left-color: darkgray;
+       border-left-style: solid;
+       border-top-right-radius: 3px;
+       border-bottom-right-radius: 3px;
+   }
+
+   /* ==========================================
+      核心修复：下拉出来的列表
+      ========================================== */
+   QComboBox QAbstractItemView {
+       border: 1px solid #DCDFE6;
+       background-color: #FFFFFF;
+       outline: 0px; /* 去掉虚线框 */
+   }
+
+   QComboBox QAbstractItemView::item {
+       min-height: 30px; /* 每项的高度，防止太挤 */
+       color: #606266;   /* 强制文字颜色为深灰 */
+       padding-left: 8px;
+   }
+
+   /* 选中某一项时的背景色和文字色 */
+   QComboBox QAbstractItemView::item:selected {
+       background-color: #ECF5FF;
+       color: #409EFF;
+   }
+
+   /* 鼠标悬浮在某一项时 */
+   QComboBox QAbstractItemView::item:hover {
+       background-color: #F5F7FA;
+   }
+
+/* =================================================================
+   底部按钮通用样式
+   ================================================================= */
+QPushButton {
+    border-radius: 4px;
+    padding: 6px 20px;
+    font-size: 14px;
+    min-height: 28px;
+    min-width: 80px;
+}
+
+/* --- 取消按钮 (白底灰边，次要操作) --- */
+QPushButton#btn_cancel {
+    background-color: #FFFFFF;
+    color: #606266;
+    border: 1px solid #DCDFE6;
+}
+QPushButton#btn_cancel:hover {
+    color: #409EFF;
+    border-color: #C6E2FF;
+    background-color: #ECF5FF;
+}
+QPushButton#btn_cancel:pressed {
+    border-color: #3A8EE6;
+    color: #3A8EE6;
+}
+
+/* --- 确认按钮 (蓝底白字，主要操作) --- */
+QPushButton#btn_enter {
+    background-color: #409EFF;
+    color: #FFFFFF;
+    border: 1px solid #409EFF;
+}
+QPushButton#btn_enter:hover {
+    background-color: #66B1FF;
+    border-color: #66B1FF;
+}
+QPushButton#btn_enter:pressed {
+    background-color: #3A8EE6;
+    border-color: #3A8EE6;
+}

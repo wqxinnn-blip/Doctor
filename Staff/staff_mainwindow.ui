@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Staff_MainWindow</class>
+ <widget class="QMainWindow" name="Staff_MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1168</width>
+    <height>674</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,3">
+    <item>
+     <widget class="QWidget" name="left_widget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>180</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>180</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>171</width>
+         <height>541</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>8</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>菜单栏</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listWidget">
+          <property name="spacing">
+           <number>1</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>科室档案管理</string>
+           </property>
+           <property name="font">
+            <font>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>image/mainWIn_img/reserve.png</normaloff>image/mainWIn_img/reserve.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>医师档案管理</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>image/mainWIn_img/archive.png</normaloff>image/mainWIn_img/archive.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>排班调度管理</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>image/mainWIn_img/Schedule.png</normaloff>image/mainWIn_img/Schedule.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>诊疗工作量统计</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>image/mainWIn_img/workStatic.png</normaloff>image/mainWIn_img/workStatic.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>系统日志统计</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>image/mainWIn_img/sys.png</normaloff>image/mainWIn_img/sys.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>个人资料管理</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>image/mainWIn_img/myProfile.png</normaloff>image/mainWIn_img/myProfile.png</iconset>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="right_widget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1168</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>管理端</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

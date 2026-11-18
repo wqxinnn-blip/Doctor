@@ -1,0 +1,19 @@
+# 编译输出目录
+build/
+debug/
+release/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+
+# Qt 生成文件
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.pro.user
+
+# 其他缓存
+.qtc_clangd/

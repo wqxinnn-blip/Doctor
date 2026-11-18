@@ -1,0 +1,327 @@
+/* ========== 全局基础样式 ========== */
+QMainWindow#Staff_MainWindow {
+    background-color: #F5F6F8;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    font-size: 14px;
+    color: #1D2129;
+}
+
+QWidget#centralwidget {
+    background-color: #F5F6F8;
+}
+
+QMenuBar#menubar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E5E6EB;
+    height: 48px;
+    font-size: 14px;
+}
+
+QMenuBar::item {
+    padding: 0 16px;
+    background: transparent;
+    color: #1D2129;
+}
+
+QMenuBar::item:selected {
+    background-color: #F2F3F5;
+}
+
+QStatusBar#statusbar {
+    background-color: #FFFFFF;
+    border-top: 1px solid #E5E6EB;
+    color: #86909C;
+    font-size: 12px;
+}
+
+
+/* ========== 左侧侧边栏菜单 【修正后】 ========== */
+QWidget#left_widget {
+    background-color: #FFFFFF;  /* 侧边栏主体为白色背景 */
+    border-right: 1px solid #E5E6EB;  /* 右侧加浅灰分隔线 */
+}
+
+/* 仅顶部菜单栏标题为蓝色背景 */
+QLabel#label {
+    background-color: #165DFF;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px 20px;
+    border: none;
+}
+
+/* 菜单列表 白底黑字 */
+QListWidget#listWidget {
+    background-color: #FFFFFF;
+    border: none;
+    outline: none;
+    padding: 4px 0;
+}
+
+QListWidget::item {
+    height: 44px;
+    color: #1D2129;
+    padding-left: 20px;
+    border-left: 3px solid transparent;
+}
+
+QListWidget::item:hover {
+    background-color: #F2F3F5;
+    color: #165DFF;
+}
+
+QListWidget::item:selected {
+    background-color: #E8F3FF;
+    border-left: 3px solid #165DFF;
+    color: #165DFF;
+}
+
+QListWidget:focus {
+    outline: 0px;
+}
+
+/* ==================== 排班管理页面 整体样式 ==================== */
+ScheduleManagePage {
+    background-color: #ffffff;
+    font-size: 13px;
+    color: #1F2329;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+/* ==================== 顶部功能栏 修正版 ==================== */
+/* 精准匹配科室标签，固定宽度，取消异常背景 */
+ScheduleManagePage QLabel#label {
+    font-size: 13px;
+    color: #1F2329;
+    background-color: transparent;  /* 强制透明背景，去掉蓝色 */
+    min-width: 50px;
+    max-width: 50px;              /* 固定宽度，不会被拉宽 */
+    alignment: center;
+}
+
+ScheduleManagePage QComboBox {
+    height: 28px;
+    padding: 0 8px;
+    padding-right: 24px;         /* 给右侧箭头留位置 */
+    border: 1px solid #DCDFE6;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #1F2329;
+    background-color: #ffffff;
+}
+ScheduleManagePage QComboBox:hover {
+    border-color: #409eff;
+}
+
+/* 下拉箭头区域 */
+ScheduleManagePage QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: right;
+    width: 24px;
+    border-left: 1px solid #DCDFE6;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #ffffff;
+}
+
+/* 下拉箭头图标：修复箭头消失 */
+ScheduleManagePage QComboBox::down-arrow {
+    image: url(:/image/mainWIn_img/arrow.png); /* 换成你项目里的箭头图标路径 */
+    width: 12px;
+    height: 12px;
+}
+
+ScheduleManagePage QToolButton {
+    height: 28px;
+    padding: 0 12px;
+    border: 1px solid #DCDFE6;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #333333;
+    background-color: #ffffff;
+}
+ScheduleManagePage QToolButton:hover {
+    color: #409eff;
+    border-color: #409eff;
+    background-color: #ECF5FF;
+}
+
+
+/* ==================== Tab 标签栏 ==================== */
+ScheduleManagePage QTabWidget::pane {
+    border: 1px solid #E4E7ED;
+    border-radius: 4px;
+    background-color: #ffffff;
+    top: -1px;
+}
+
+ScheduleManagePage QTabBar::tab {
+    height: 36px;
+    padding: 0 20px;
+    font-size: 13px;
+    color: #606266;
+    background-color: #F5F7FA;
+    border: 1px solid #E4E7ED;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-right: 2px;
+}
+ScheduleManagePage QTabBar::tab:selected {
+    color: #409eff;
+    background-color: #ffffff;
+    font-weight: bold;
+}
+ScheduleManagePage QTabBar::tab:hover {
+    color: #409eff;
+}
+
+/* ==================== 排班表格 通用样式 ==================== */
+ScheduleManagePage QTableWidget {
+    border: none;
+    background-color: #ffffff;
+    gridline-color: #E4E7ED; /* 网格线加深，避免和背景融在一起 */
+    font-size: 13px;
+}
+
+/* 表头样式 */
+ScheduleManagePage QHeaderView::section {
+    height: 36px;
+    background-color: #F5F7FA;
+    color: #1F2329;
+    font-weight: bold;
+    font-size: 13px;
+    border: none;
+    border-right: 1px solid #E4E7ED;
+    border-bottom: 1px solid #E4E7ED;
+    padding-left: 4px;
+}
+ScheduleManagePage QHeaderView::section:last {
+    border-right: none;
+}
+
+/* 单元格选中样式 */
+ScheduleManagePage QTableWidget::item:selected {
+    background-color: #ECF5FF;
+    color: #1F2329;
+}
+
+
+
+
+
+
+
+
+
+/* ========== 预约患者列表 - 表格 ========== */
+QTableWidget {
+    background-color: #ffffff;
+    alternate-background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    gridline-color: #f0f0f0;
+    font-size: 13px;
+    color: #333333;
+    outline: none;
+}
+QTableWidget::item {
+    padding: 0px; /* 重点！原来8px会挤压单元格内按钮，文字居中交给代码处理 */
+    border-bottom: 1px solid #f5f5f5;
+    color: #333333;
+    background-color: #ffffff;
+}
+QTableWidget::item:selected {
+    background-color: #ecf5ff;
+    color: #409eff;
+}
+QTableWidget::item:hover {
+    background-color: #f5f7fa;
+}
+/* 表头 */
+QHeaderView::section {
+    background-color: #fafafa;
+    color: #333333;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    font-weight: 600;
+    font-size: 13px;
+}
+QHeaderView::section:vertical {
+    border: none;
+}
+/* ========== 查看报告按钮 ========== */
+QPushButton#btn_view_report {
+    color: #409eff;
+    background-color: #ecf5ff;
+    border: 1px solid #b3d8ff;
+    border-radius: 4px;
+    padding: 5px 14px;
+    font-size: 12px;
+    min-width: 80px;
+}
+QPushButton#btn_view_report:hover {
+    background-color: #d9ecff;
+    border-color: #409eff;
+}
+QPushButton#btn_view_report:pressed {
+    background-color: #c6e2ff;
+}
+QPushButton#btn_consult {
+    color: #ffffff;
+    background-color: #409eff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 16px;
+    min-width: 60px;
+
+}
+QPushButton#btn_miss {
+    color: #ffffff;
+    background-color: #f56c6c;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 16px;
+    min-width: 60px;
+
+}
+QPushButton#btn_consult:hover {
+    background-color: #66b1ff;
+}
+QPushButton#btn_consult:pressed {
+    background-color: #3a8ee6;
+}
+QPushButton#btn_miss:hover {
+    background-color: #f78989;
+}
+QPushButton#btn_miss:pressed {
+    background-color: #dd6161;
+}
+/* ========== 分页 ========== */
+QPushButton#btn_prev,
+QPushButton#btn_next {
+    color: #ffffff;
+    background-color: #409eff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 24px;
+    font-size: 13px;
+    min-width: 90px;
+}
+QPushButton#btn_prev:hover,
+QPushButton#btn_next:hover {
+    background-color: #66b1ff;
+}
+QPushButton#btn_prev:disabled,
+QPushButton#btn_next:disabled {
+    background-color: #c0c4cc;
+    color: #ffffff;
+}
+QLabel#lab_page_info {
+    color: #606266;
+    font-size: 14px;
+    padding: 0 16px;
+    min-width: 60px;
+}

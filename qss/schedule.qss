@@ -1,0 +1,283 @@
+/* ===== 页面整体 ===== */
+QWidget#ScheduleManagePage {
+    background-color: #f5f7fa;
+}
+
+/* ===== 顶部工具栏容器 ===== */
+QWidget#widget {
+    background-color: #ffffff;
+    border: 1px solid #e4e7ed;
+    border-radius: 8px;
+}
+
+/* 只清掉普通子 QWidget 的背景/边框，不误伤 QToolButton/QComboBox/QLabel */
+QWidget#widget > QWidget:not(QToolButton):not(QComboBox):not(QLabel) {
+    background: transparent;
+    border: none;
+}
+
+/* ===== 标签 ===== */
+QLabel {
+    font-size: 14px;
+    color: #303133;
+    background: transparent;
+}
+
+/* ===== 下拉框 ===== */
+QComboBox#combo_depart {
+    min-width: 160px;
+    min-height: 30px;
+    padding: 4px 24px 4px 10px;
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #303133;
+    font-size: 14px;
+}
+QComboBox#combo_depart:hover {
+    border-color: #c0c4cc;
+}
+QComboBox#combo_depart:focus {
+    border-color: #409eff;
+}
+QComboBox#combo_depart::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 24px;
+    border-left: none;
+    background: transparent;
+}
+QComboBox#combo_depart::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #909399;
+    width: 0;
+    height: 0;
+    margin-right: 8px;
+}
+QComboBox#combo_depart QAbstractItemView {
+    border: 1px solid #e4e7ed;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #303133;
+    selection-background-color: #ecf5ff;
+    selection-color: #409eff;
+    outline: none;
+    padding: 4px;
+}
+QComboBox#combo_depart QAbstractItemView::item {
+    min-height: 28px;
+    padding: 4px 10px;
+    color: #303133;
+}
+QComboBox#combo_depart QAbstractItemView::item:hover {
+    background-color: #f5f7fa;
+    color: #409eff;
+}
+QComboBox#combo_depart QAbstractItemView::item:selected {
+    background-color: #ecf5ff;
+    color: #409eff;
+}
+
+/* ===== 工具按钮 ===== */
+QToolButton {
+    min-height: 30px;
+    padding: 4px 14px;
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #303133;
+    font-size: 13px;
+}
+QToolButton:hover {
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+}
+QToolButton:pressed {
+    color: #3a8ee6;
+    border-color: #3a8ee6;
+    background-color: #d9ecff;
+}
+QToolButton:disabled {
+    color: #c0c4cc;
+    border-color: #ebeef5;
+    background-color: #f5f7fa;
+}
+
+/* 自动排班：蓝底白字 */
+QToolButton#btn_auto {
+    color: #ffffff;
+    background-color: #409eff;
+    border: 1px solid #409eff;
+}
+QToolButton#btn_auto:hover {
+    color: #ffffff;
+    background-color: #66b1ff;
+    border-color: #66b1ff;
+}
+QToolButton#btn_auto:pressed {
+    color: #ffffff;
+    background-color: #3a8ee6;
+    border-color: #3a8ee6;
+}
+
+/* 复制上周：浅蓝底蓝字 */
+QToolButton#btn_copy {
+    color: #409eff;
+    border: 1px solid #b3d8ff;
+    background-color: #ecf5ff;
+}
+QToolButton#btn_copy:hover {
+    color: #409eff;
+    background-color: #d9ecff;
+}
+QToolButton#btn_copy:pressed {
+    color: #3a8ee6;
+    background-color: #c6e2ff;
+}
+
+/* ===== Tab 控件 ===== */
+QTabWidget#scheduleTabWidget::pane {
+    border: 1px solid #e4e7ed;
+    border-radius: 8px;
+    background-color: #ffffff;
+    top: -1px;
+}
+QTabWidget#scheduleTabWidget QTabBar::tab {
+    min-width: 100px;
+    padding: 8px 18px;
+    margin-right: 2px;
+    border: 1px solid #e4e7ed;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #f5f7fa;
+    color: #606266;
+    font-size: 13px;
+}
+QTabWidget#scheduleTabWidget QTabBar::tab:hover {
+    color: #409eff;
+}
+QTabWidget#scheduleTabWidget QTabBar::tab:selected {
+    color: #409eff;
+    background-color: #ffffff;
+    border-color: #e4e7ed;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* ===== 表格 ===== */
+QTableWidget {
+    border: none;
+    background-color: #ffffff;
+    gridline-color: #ebeef5;
+    font-size: 13px;
+    selection-background-color: #ecf5ff;
+    selection-color: #303133;
+    color: #303133;
+}
+QTableWidget::item {
+    padding: 4px;
+    border-bottom: 1px solid #ebeef5;
+    color: #303133;
+}
+QTableWidget::item:selected {
+    background-color: #ecf5ff;
+    color: #303133;
+}
+
+/* 表头 */
+QHeaderView::section {
+    background-color: #fafafa;
+    color: #606266;
+    padding: 6px;
+    border: none;
+    border-right: 1px solid #ebeef5;
+    border-bottom: 1px solid #ebeef5;
+    font-weight: 600;
+}
+QHeaderView::section:last {
+    border-right: none;
+}
+
+/* 左上角按钮 */
+QTableCornerButton::section {
+    background-color: #fafafa;
+    border: none;
+    border-right: 1px solid #ebeef5;
+    border-bottom: 1px solid #ebeef5;
+}
+
+/* ===== 滚动条美化 ===== */
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background: #c0c4cc;
+    border-radius: 5px;
+    min-height: 30px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #909399;
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+QScrollBar:horizontal {
+    background: transparent;
+    height: 10px;
+    margin: 0;
+}
+QScrollBar::handle:horizontal {
+    background: #c0c4cc;
+    border-radius: 5px;
+    min-width: 30px;
+}
+QScrollBar::handle:horizontal:hover {
+    background: #909399;
+}
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0;
+}
+
+QMessageBox {
+    background-color: #ffffff;
+}
+
+QMessageBox QLabel {
+    color: #303133;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    /* 留出一点点边距，防止文字贴边 */
+    padding: 4px;
+}
+
+/* QMessageBox 里的按钮样式 */
+QMessageBox QPushButton {
+    min-width: 80px;
+    min-height: 30px;
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #303133;
+    font-size: 13px;
+    font-family: "Microsoft YaHei";
+}
+
+QMessageBox QPushButton:hover {
+    color: #409eff;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+}
+
+QMessageBox QPushButton:pressed {
+    color: #3a8ee6;
+    border-color: #3a8ee6;
+    background-color: #d9ecff;
+}
